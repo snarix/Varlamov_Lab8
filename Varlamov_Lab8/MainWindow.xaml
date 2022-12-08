@@ -1,0 +1,79 @@
+﻿<Window x:Class="Varlamov_Lab8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Varlamov_Lab8"
+        mc:Ignorable="d"
+        Title="Lab8" Height="450" Width="800" ResizeMode="CanMinimize" Icon="/55555.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.ColumnSpan="2"
+              VerticalAlignment="Top">
+            <MenuItem Header="О программе"
+                      Click="AboutProgramm"/>
+            <MenuItem Header="Выход"
+                      Click="Exit"/>
+        </Menu>
+
+        <GroupBox>
+            <Grid>
+                <TextBox Margin="10,53,547,132"
+                         x:Name ="lenghtBus"/>
+                <TextBox Margin="10,105,547,79"
+                         x:Name="capacityBus"/>
+                <TextBox Margin="10,161,547,23"
+                         x:Name="countSittingBus"/>
+                <Label Margin="68,24,605,162" 
+                       Content="Длина автобуса"/>
+                <Label Margin="58,74,596,110"
+                       Content="Вместимость человек"/>
+                <Label Margin="53,131,580,54"
+                       Content="Кол-во мест для сидения"/>
+                <Button Margin="293,19,264,166"
+                        Content="Cоздать 1-ый автобус"
+                        Click="Make1"/>
+                <Button Margin="547,19,10,166"
+                        Content="Cоздать 2-ой автобус"
+                        Click="Make2"/>
+                <TextBox Margin="293,53,264,132"
+                         x:Name="bus1"/>
+                <TextBox Margin="293,106,264,79"
+                         x:Name="drive1"/>
+                <TextBox Margin="293,161,264,24"
+                         x:Name="transportating1"/>
+                <TextBox Margin="547,53,10,132"
+                         x:Name="bus2"/>
+                <TextBox Margin="547,106,10,79"
+                         x:Name="drive2"/>
+                <TextBox Margin="547,161,10,24"
+                         x:Name="transportating2"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1"
+                  Grid.Column="2"
+                  Header="Прочее">
+            <Grid>
+                <Button Margin="10,90,10,68"
+                        Content="О программе"
+                        Click="AboutProgramm"/>
+                <Button Margin="10,147,10,10"
+                        Content="Выход"
+                        Click="Exit"/>
+                <Button Margin="10,40,10,118"
+                        Content="Сравнить"
+                        Click="Compare"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
